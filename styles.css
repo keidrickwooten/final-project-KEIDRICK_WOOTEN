@@ -1,0 +1,132 @@
+/* Reset and box sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Root color scheme for warm tones */
+:root {
+  --primary-color: #E07A5F; /* Terracotta */
+  --secondary-color: #3D405B; /* Dark Blue */
+  --accent-color: #F2CC8F; /* Sandy Brown */
+  --text-color: #33312E; /* Almost Black */
+  --background-color: #F4F1DE; /* Off White */
+}
+
+/* Typography */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6; /* Improves readability */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; /* Roboto Bold for headings */
+}
+
+/* Header and navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background: var(--primary-color);
+  color: var(--background-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 1em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--background-color);
+  font-weight: 700; /* Make the nav items bold */
+}
+
+.signup-button {
+  padding: 0.5em 1em;
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Footer styling */
+footer {
+  padding: 1em;
+  background: var(--secondary-color);
+  color: var(--background-color);
+  text-align: center;
+}
+
+footer a {
+  color: var(--background-color);
+  margin-right: 1em;
+  text-decoration: none;
+}
+
+/* Interactive elements */
+button, input[type="submit"] {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #CC6A4F; /* Slightly darker terracotta */
+}
+
+input[type="search"], input[type="email"], input[type="text"], input[type="tel"] {
+  border: 1px solid var(--secondary-color);
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Accessibility */
+a:focus, button:focus, input:focus {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+  }
+
+  nav ul li {
+      margin-bottom: 0.5em;
+  }
+
+  header {
+      flex-direction: column;
+  }
+
+  .signup-button {
+      margin-top: 1em;
+  }
+}
+/* Logo styling */
+.logo {
+  max-width: 75px; /* Ensures a consistent size across pages */
+  height: auto; /* Maintains the aspect ratio */
+  margin-right: 15px; /* Space between the logo and the navigation */
+  display: inline-block; /* Aligns with other elements in the header */
+  vertical-align: middle; /* Centers logo with navigation links */
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub - Charities</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="helphub-logo.png" alt="HelpHub Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="charities.html">Charities</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main>
+        <h1>Charity List</h1>
+        <input type="search" id="charity-search" placeholder="Search charities...">
+        <div id="charity-list">
+            <!-- Posts will be loaded here dynamically -->
+        </div>
+    </main>
+
+    <script src="charity_list.js"></script>
+    <script>
+        document.getElementById('charity-search').addEventListener('input', function(event) {
+            const searchTerm = event.target.value.toLowerCase();
+            const charityList = document.querySelectorAll('#charity-list div');
+            charityList.forEach(charity => {
+                if (charity.textContent.toLowerCase().includes(searchTerm)) {
+                    charity.style.display = 'block';
+                } else {
+                    charity.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <footer>
+        <a href="socials.html">Socials</a>
+        <a href="privacy.html">Privacy/Terms</a>
+        <a href="contact.html">Contact Info</a>
+    </footer>
+</body>
+</html>

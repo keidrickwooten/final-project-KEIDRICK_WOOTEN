@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub - Charity Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="helphub-logo.png" alt="HelpHub Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="charities.html">Charities</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main>
+        <article>
+            <h1>Charity Name <span id="infoIcon" style="cursor:pointer;">ℹ️</span></h1>
+            <div id="moreInfo" style="display:none;">
+                <p>More details about the charity...</p>
+            </div>
+            <img src="charity-logo.png" alt="Charity Logo">
+            <h2>About</h2>
+            <p>Information about the charity goes here.</p>
+            <button id="volunteerBtn">Volunteer Now</button>
+            <div id="volunteerModal" style="display:none;">
+                <form id="volunteerForm">
+                    <label for="volunteerName">Name:</label>
+                    <input type="text" id="volunteerName" required>
+                    <label for="volunteerEmail">Email:</label>
+                    <input type="email" id="volunteerEmail" required>
+                    <input type="submit" value="Sign Up">
+                </form>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <a href="socials.html">Socials</a>
+        <a href="privacy.html">Privacy/Terms</a>
+        <a href="contact.html">Contact Info</a>
+    </footer>
+
+    <script src="charity_profile.js"></script>
+</body>
+</html>
